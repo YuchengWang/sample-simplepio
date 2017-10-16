@@ -39,6 +39,7 @@ public class ButtonActivity extends Activity {
         super.onCreate(savedInstanceState);
         Log.i(TAG, "Starting ButtonActivity");
 
+        /*
         PeripheralManagerService service = new PeripheralManagerService();
         try {
             String pinName = BoardDefaults.getGPIOForButton();
@@ -56,11 +57,13 @@ public class ButtonActivity extends Activity {
         } catch (IOException e) {
             Log.e(TAG, "Error on PeripheralIO API", e);
         }
+        */
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        /*
         if (mButtonGpio != null) {
             // Close the Gpio pin
             Log.i(TAG, "Closing Button GPIO pin");
@@ -72,5 +75,6 @@ public class ButtonActivity extends Activity {
                 mButtonGpio = null;
             }
         }
+        */
     }
 }
